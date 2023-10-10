@@ -1,0 +1,135 @@
+/*  variables*/
+/* Aspectos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(216, 12%, 8%);
+  color: hsl(0, 0%, 100%);
+  font-family: "Overpass", sans-serif;
+  font-size: 0.95rem;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 95vh;
+}
+
+.container {
+  background-color: hsl(213, 19%, 18%);
+  padding: 1.75rem;
+  border-radius: 2rem;
+  width: 25rem;
+}
+
+.text {
+  color: hsl(216, 12%, 54%);
+  line-height: 1.5rem;
+}
+
+.active {
+  background-color: hsl(25, 97%, 53%) !important;
+  color: hsl(0, 0%, 100%) !important;
+}
+
+/* state srtart */
+.state-start {
+  position: relative;
+  display: block;
+}
+.state-start .img-state-start {
+  background-color: hsla(217, 12%, 63%, 0.2);
+  padding: 1rem;
+  border-radius: 50%;
+}
+.state-start h1 {
+  margin: 1.5rem 0;
+  font-weight: 400;
+  font-size: 2rem;
+}
+.state-start .options-rating {
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem 0;
+}
+.state-start .options-rating .options {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+.state-start .options-rating .options .option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  background-color: hsla(217, 12%, 63%, 0.2);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.state-start .options-rating .options .option:hover {
+  background-color: hsl(217, 12%, 63%);
+}
+.state-start .options-rating input[type=button] {
+  padding: 1rem;
+  border-radius: 2rem;
+  border: none;
+  background-color: orange;
+  color: hsl(0, 0%, 100%);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.3rem;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.state-start .options-rating input[type=button]:hover {
+  background-color: hsl(0, 0%, 100%);
+  color: orange;
+}
+
+/* state end */
+.state-end {
+  position: relative;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.state-end .badge {
+  margin: 1.5rem 0;
+  background-color: hsla(217, 12%, 63%, 0.2);
+  color: orange;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+}
+.state-end .gratitude {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+.state-end .congratulations {
+  text-align: center;
+}
+
+.attribution {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(0, 0%, 100%);
+}
+
+/*  PANTALLAS MOVILES */
+@media screen and (max-width: 375px) {
+  .container {
+    margin: 0 1rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

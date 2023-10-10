@@ -1,0 +1,151 @@
+/*  variables*/
+$text: 'Overpass', sans-serif;
+$orange: hsl(25, 97%, 53%);
+$white: hsl(0, 0%, 100%);
+$light-gray: hsl(217, 12%, 63%);
+$light-gray-opacity: hsla(217, 12%, 63%, 0.2);
+$medium-gray: hsl(216, 12%, 54%);
+$dark-blue: hsl(213, 19%, 18%);
+$very-dark-blue: hsl(216, 12%, 8%);
+
+/* Aspectos generales */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $very-dark-blue;
+    color: $white;
+    font-family: $text;
+    font-size: 0.95rem;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 95vh;
+}
+
+.container {
+    background-color: $dark-blue;
+    padding: 1.75rem;
+    border-radius: 2rem;
+    width: 25rem;
+}
+
+.text {
+    color: $medium-gray;
+    line-height: 1.5rem;
+}
+
+.active {
+    background-color: $orange!important;
+    color: $white!important;
+}
+
+/* state srtart */
+
+.state-start {
+    position: relative;
+    display: block;
+
+    .img-state-start {
+        background-color: $light-gray-opacity;
+        padding: 1rem;
+        border-radius: 50%;
+    }
+
+    h1 {
+        margin: 1.5rem 0;
+        font-weight: 400;
+        font-size: 2rem;
+    }
+
+    .options-rating {
+        display: flex;
+        flex-direction: column;
+        margin: 1.5rem 0;  
+
+        .options {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+
+            .option {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 3rem;
+                height: 3rem;
+                background-color: $light-gray-opacity; 
+                border-radius: 50%;  
+                cursor: pointer;   
+                transition: all 0.5s;      
+            }
+
+            .option:hover {
+                background-color: $light-gray;
+            }
+
+        }
+        
+        input[type="button"] {
+            padding: 1rem;
+            border-radius: 2rem;
+            border: none;
+            background-color: orange;
+            color: $white;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.3rem;
+            transition: all 0.5s;
+            cursor: pointer;
+        }
+
+        input[type="button"]:hover {
+            background-color: $white;
+            color: orange;
+        }        
+    }
+}
+
+/* state end */
+.state-end {
+    position: relative;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .badge {
+        margin: 1.5rem 0;
+        background-color: $light-gray-opacity;
+        color: orange;
+        padding: 0.5rem 1rem;
+        border-radius: 2rem;        
+    }
+
+    .gratitude {
+        margin-bottom: 1rem;
+        font-size: 2rem;
+    }
+
+    .congratulations {
+        text-align: center;
+    }
+}
+
+.attribution { font-size: 1rem; text-align: center; }
+.attribution a { color: $white }
+
+
+/*  PANTALLAS MOVILES */
+@media screen and (max-width:375px) {
+    .container {
+        margin: 0 1rem;
+    }
+}
